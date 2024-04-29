@@ -22,6 +22,10 @@ public class Triangulo extends Poligono {
 
 	@Override
 	public void agregarLados(List<Lado> lado) {
+		if(lado.size()!= 3) {
+			throw new IllegalArgumentException("Un triángulo debe tener 3 lados");
+		}
+		
 		this.lados.add((Lado) lado);
 	}
 
