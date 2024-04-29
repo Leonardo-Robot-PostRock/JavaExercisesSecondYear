@@ -10,6 +10,7 @@ public class Provincia {
 	private String capital;
 	public Provincia m_Provincia;
 	public Ciudad m_Ciudad;
+	public Capital m_Capital;
 
 	public Provincia(){
 
