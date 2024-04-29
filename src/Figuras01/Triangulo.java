@@ -1,6 +1,5 @@
 package Figuras01;
 
-import java.util.Iterator;
 import java.util.List;
 
 /**
