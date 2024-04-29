@@ -1,5 +1,7 @@
 package Figuras01;
 
+import java.util.List;
+
 /**
  * @author mrRobot
  * @version 1.0
@@ -7,8 +9,8 @@ package Figuras01;
  */
 public class Cuadrado extends Rectangulo {
 
-	public Cuadrado(){
-		
+	public Cuadrado(List<Lado> lados) {
+		super(lados);
 	}
 
 }
