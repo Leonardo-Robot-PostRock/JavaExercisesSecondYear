@@ -8,6 +8,16 @@ import java.util.List;
  * @created 28-Apr-2024 5:26:50 PM
  */
 public class Poligono implements Figura {
+	protected List<Lado> lados;
+
+	public List<Lado> getLados() {
+		return lados;
+	}
+
+	public void setLados(List<Lado> lados) {
+		this.lados = lados;
+	}
+
 
 	@Override
 	public void agregarLados(List<Lado> lado) {
