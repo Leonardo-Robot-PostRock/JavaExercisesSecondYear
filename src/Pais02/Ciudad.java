@@ -7,13 +7,7 @@ package Pais02;
  */
 public class Ciudad {
 
-	public Capital m_Capital;
-
 	public Ciudad(){
-
-	}
-
-	public void finalize() throws Throwable {
 
 	}
 

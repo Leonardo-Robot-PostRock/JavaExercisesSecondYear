@@ -11,8 +11,4 @@ public class Capital {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 }

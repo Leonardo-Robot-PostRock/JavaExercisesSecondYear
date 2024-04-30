@@ -7,29 +7,12 @@ package Pais02;
  */
 public class Provincia {
 
-	private String capital;
 	public Provincia m_Provincia;
 	public Ciudad m_Ciudad;
 	public Capital m_Capital;
 
 	public Provincia(){
 
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-
-	public String getcapital(){
-		return capital;
-	}
-
-	/**
-	 * 
-	 * @param newVal
-	 */
-	public void setcapital(String newVal){
-		capital = newVal;
 	}
 
 }

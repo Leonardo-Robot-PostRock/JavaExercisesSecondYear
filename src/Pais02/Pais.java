@@ -15,8 +15,4 @@ public class Pais {
 
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
 }
