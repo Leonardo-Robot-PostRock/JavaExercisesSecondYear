@@ -18,19 +18,4 @@ public class Cuadrilatero extends Poligono {
 		}
 	}
 
-	@Override
-	public void agregarLados(List<Lado> lado) {
-
-	}
-
-	@Override
-	public double calcularArea() {
-		return 0;
-	}
-
-	@Override
-	public double calcularPerimetro() {
-		return 0;
-	}
-
 }

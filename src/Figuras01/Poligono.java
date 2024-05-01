@@ -1,5 +1,6 @@
 package Figuras01;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,8 +8,12 @@ import java.util.List;
  * @version 1.0
  * @created 28-Apr-2024 5:26:50 PM
  */
-public class Poligono implements Figura {
+public class Poligono extends Figura {
 	protected List<Lado> lados;
+	
+	public Poligono() {
+		this.lados = new ArrayList<Lado>();
+	}
 
 	public List<Lado> getLados() {
 		return lados;
@@ -17,25 +22,5 @@ public class Poligono implements Figura {
 	public void setLados(List<Lado> lados) {
 		this.lados = lados;
 	}
-
-
-	@Override
-	public void agregarLados(List<Lado> lado) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public double calcularArea() {
-		return 0;
-	}
-
-
-	@Override
-	public double calcularPerimetro() {
-		return 0;		
-	}	
-	
 	
 }

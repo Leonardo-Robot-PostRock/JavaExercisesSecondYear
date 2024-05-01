@@ -9,48 +9,12 @@ import java.util.List;
  */
 public class Triangulo extends Poligono {
 
-	private double perimetro;
-	private double area;
-
 	public Triangulo(List<Lado> lados) {
 		if (lados.size() != 3) {
 			throw new IllegalArgumentException("Un triángulo debe tener 3 lados");
 		}
 
 		this.lados = lados;
-	}
-
-	@Override
-	public void agregarLados(List<Lado> lado) {
-		if(lado.size()!= 3) {
-			throw new IllegalArgumentException("Un triángulo debe tener 3 lados");
-		}
-		
-		this.lados.add((Lado) lado);
-	}
-
-	@Override
-	public double calcularArea() {
-	    double semiperimetro = calcularPerimetro() / 2;
-	    double productoSemiperimetro = semiperimetro;
-	    
-	    for (Lado lado : lados) {
-	        double longitud = lado.calcularLongitudEntre2Puntos();
-	        productoSemiperimetro *= (semiperimetro - longitud);
-	    }
-
-	    this.area = Math.sqrt(productoSemiperimetro);
-
-	    return this.area;
-	}
-
-
-	@Override
-	public double calcularPerimetro() {
-		for (Lado lado : lados) {
-			this.perimetro += lado.calcularLongitudEntre2Puntos();
-		}
-		return this.perimetro;
 	}
 
 }
