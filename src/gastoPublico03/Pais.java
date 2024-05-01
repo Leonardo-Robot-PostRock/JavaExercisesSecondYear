@@ -9,23 +9,43 @@ import java.util.List;
  * @created 30-Apr-2024 5:42:58 PM
  */
 
-public class ControladorGastoRecaudacion {
+public class Pais {
+	
 	List<Provincia> provincias;
 	List<Ciudad> ciudades;
-
-	public ControladorGastoRecaudacion() {
-		this.provincias = new ArrayList<Provincia>();
+	private String nombre;
+	
+	public Pais(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getNombre() {
+		return nombre;
 	}
 
-	public void agregarProvincia(Provincia provincia) {
-		this.provincias.add(provincia);
+	public List<Provincia> getProvincias() {
+		return provincias;
+	}
+
+	public void setProvincias(List<Provincia> provincias) {
+		this.provincias = provincias;
+	}
+
+	public List<Ciudad> getCiudades() {
+		return ciudades;
+	}
+
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
 
 	public List<Ciudad> encotrarCiudadesConDeficit() {
 		List<Ciudad> ciudadesConDeficit = new ArrayList<Ciudad>();
 
-		for (Ciudad ciudad : ciudades) {
-			if (ciudad.calcularDeficit() > 0) {
+		for (Ciudad ciudad : this.ciudades) {
+			double deficit = ciudad.calcularDeficit();
+			System.out.println("Recorriendo ciudad: " + ciudad.getNombre());
+			if (deficit > 0) {
 				if (ciudad.tieneMasDeCienMilHabitantes()) {
 					ciudadesConDeficit.add(ciudad);
 				}

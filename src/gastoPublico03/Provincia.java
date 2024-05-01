@@ -1,6 +1,5 @@
 package gastoPublico03;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,16 +14,15 @@ public class Provincia {
 	
 	public Provincia(String nombre){
 		this.nombre = nombre;
-		this.ciudades = new ArrayList<Ciudad>();
 	}
 
 
 	public List<Ciudad> getCiudades() {
 		return ciudades;
 	}
-
-	public void setCiudades(List<Ciudad> m_Ciudad) {
-		this.ciudades = m_Ciudad;
+	
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
 
 	public String getNombre() {
@@ -33,14 +31,6 @@ public class Provincia {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	/**
-	 * 
-	 * @param ciudad
-	 */
-	public void agregarCiudad(Ciudad ciudad){
-		this.ciudades.add(ciudad);
 	}
 
 }
