@@ -11,6 +11,13 @@ public class Cuadrado extends Rectangulo {
 
 	public Cuadrado(List<Lado> lados) {
 		super(lados);
+
+		double primerLado = lados.get(0).calcularLongitudEntre2Puntos();
+		for (Lado lado : lados) {
+			if (lado.calcularLongitudEntre2Puntos() != primerLado) {
+				throw new IllegalArgumentException("Los lados de un cuadrado deben ser iguales");
+			}
+		}
 	}
 
 }

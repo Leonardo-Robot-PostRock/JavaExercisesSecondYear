@@ -9,12 +9,21 @@ import java.util.List;
  */
 public class Triangulo extends Poligono {
 
-	public Triangulo(List<Lado> lados) {
-		if (lados.size() != 3) {
-			throw new IllegalArgumentException("Un triángulo debe tener 3 lados");
-		}
+	public Triangulo() {
+		super();
+	}
 
-		this.lados = lados;
+	@Override
+	public List<Double> getLados() {
+		return super.getLados();
+	}
+
+	@Override
+	public void setLados(List<Lado> lados) {
+		if (lados.size() != 3) {
+			throw new IllegalArgumentException("Un triángulo debe tener exactamente tres lados");
+		}
+		super.setLados(lados);
 	}
 
 }

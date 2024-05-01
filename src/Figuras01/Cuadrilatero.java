@@ -9,13 +9,24 @@ import java.util.List;
  */
 public class Cuadrilatero extends Poligono {
 
-	List<Lado> lados;
-
 	public Cuadrilatero(List<Lado> lados) {
 		super();
 		if (lados.size() != 4) {
 			throw new IllegalArgumentException("No es un cuadrilatero");
 		}
+	}
+
+	@Override
+	public List<Double> getLados() {
+		if (lados.size() != 4) {
+			throw new IllegalArgumentException("No es un cuadrilatero");
+		}
+		return super.getLados();
+	}
+
+	@Override
+	public void setLados(List<Lado> lados) {
+		super.setLados(lados);
 	}
 
 }

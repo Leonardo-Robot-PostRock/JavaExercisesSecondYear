@@ -9,18 +9,20 @@ import java.util.List;
  * @created 28-Apr-2024 5:26:50 PM
  */
 public class Poligono extends Figura {
-	protected List<Lado> lados;
-	
+	protected List<Double> lados;
+
 	public Poligono() {
-		this.lados = new ArrayList<Lado>();
+		this.lados = new ArrayList<>();
 	}
 
-	public List<Lado> getLados() {
+	public List<Double> getLados() {
 		return lados;
 	}
 
 	public void setLados(List<Lado> lados) {
-		this.lados = lados;
+		for (Lado lado : lados) {
+			this.lados.add(lado.calcularLongitudEntre2Puntos());
+		}
 	}
-	
+
 }

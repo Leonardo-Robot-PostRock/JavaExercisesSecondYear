@@ -23,12 +23,13 @@ public class Main {
 		for (Lado lado : lados) {
 			System.out.println("el lado mide: " + lado.calcularLongitudEntre2Puntos());
 		}
-
-		Triangulo triangulo = new Triangulo(lados);
+		
+		Triangulo triangulo = new Triangulo();
+		triangulo.setLados(lados);
 
 		System.out.print("Lados del Triangulo:");
-		for (Lado lado : triangulo.getLados()) {
-			System.out.println("\n" + lado.calcularLongitudEntre2Puntos());
+		for (Double lado : triangulo.getLados()) {
+			System.out.println("\n" + lado);
 		}
 
 	}
