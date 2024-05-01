@@ -25,11 +25,14 @@ public class Pais {
 		this.paisesLimitrofes = new ArrayList<Pais>();
 		this.m_Capital = new Capital(nombreCapital);
 		this.m_Provincia.add(nombreProvincia);
-
 	}
 	
 	public String getNombre() {
 		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public Capital getM_Capital() {
@@ -40,9 +43,6 @@ public class Pais {
 		this.m_Capital = m_Capital;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
 	public Continente getContinente() {
 		return continente;
