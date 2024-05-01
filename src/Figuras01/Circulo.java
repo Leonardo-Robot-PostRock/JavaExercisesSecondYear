@@ -7,8 +7,8 @@ package Figuras01;
  */
 public class Circulo extends Elipse {
 
-	public Circulo(){
-
+	public Circulo() {
+		super();
 	}
 
 }

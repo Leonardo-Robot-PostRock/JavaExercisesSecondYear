@@ -8,7 +8,7 @@ import java.util.List;
  * @version 1.0
  * @created 28-Apr-2024 5:26:50 PM
  */
-public class Poligono extends Figura {
+public class Poligono {
 	protected List<Double> lados;
 
 	public Poligono() {
