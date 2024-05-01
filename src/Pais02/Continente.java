@@ -1,5 +1,7 @@
 package Pais02;
 
+import java.util.List;
+
 /**
  * @author mrRobot
  * @version 1.0
@@ -7,14 +9,31 @@ package Pais02;
  */
 public class Continente {
 
-	public Pais m_Pais;
+	private String nombre;
+	private List<Pais> m_Pais;
 
-	public Continente(){
-
+	public Continente(String nombre){
+		this.nombre = nombre;
+	}
+	
+	public Continente(String nombre, Pais pais){
+		this.m_Pais.add(pais);
 	}
 
-	public void finalize() throws Throwable {
+	public String getNombre() {
+		return nombre;
+	}
 
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public List<Pais> getM_Pais() {
+		return m_Pais;
+	}
+
+	public void setM_Pais(List<Pais> m_Pais) {
+		this.m_Pais = m_Pais;
 	}
 
 }

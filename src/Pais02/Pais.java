@@ -1,5 +1,8 @@
 package Pais02;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author mrRobot
  * @version 1.0
@@ -7,12 +10,46 @@ package Pais02;
  */
 public class Pais {
 
-	public Pais m_Pais;
-	public Provincia m_Provincia;
+	private String nombre;
+	public List<Provincia> m_Provincia;
+	public Continente continente;
 	public Capital m_Capital;
+	private List<Pais> paisesLimitrofes;
 
-	public Pais(){
+	public Pais(String nombre) {
+		this.nombre = nombre;
+		this.paisesLimitrofes = new ArrayList<Pais>();
+	}
 
+	public Pais(Provincia nombreProvincia, String nombreCapital) {
+		this.paisesLimitrofes = new ArrayList<Pais>();
+		this.m_Capital = new Capital(nombreCapital);
+		this.m_Provincia.add(nombreProvincia);
+
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Continente getContinente() {
+		return continente;
+	}
+
+	public void setContinente(Continente continente) {
+		this.continente = continente;
+	}
+
+	public List<Pais> getPaisesLimitrofes() {
+		return paisesLimitrofes;
+	}
+
+	public void setPaisesLimitrofes(Pais paisesLimitrofes) {
+		this.paisesLimitrofes.add(paisesLimitrofes);
 	}
 
 }

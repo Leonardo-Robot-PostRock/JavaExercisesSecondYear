@@ -6,9 +6,23 @@ package Pais02;
  * @created 29-Apr-2024 3:39:12 PM
  */
 public class Ciudad {
+	private String nombre;
 
-	public Ciudad(){
 
+	public Ciudad(String nombre){
+		this.nombre = nombre;
+	}
+
+	public String getNombre(){
+		return nombre;
+	}
+
+	/**
+	 * 
+	 * @param newVal
+	 */
+	public void setNombre(String newVal){
+		nombre = newVal;
 	}
 
 }
