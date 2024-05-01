@@ -11,11 +11,11 @@ import java.util.List;
 public class Provincia {
 
 	private String nombre;
-	public Capital m_Capital;
-	public List<Ciudad> m_Ciudad;
-	public List<Provincia> provinciasLimitrofes;
-	public List<Pais> paisesLimitrofes;
-	public List<Object> limitrofes;
+	private Capital m_Capital;
+	private List<Ciudad> m_Ciudad;
+	private List<Provincia> provinciasLimitrofes;
+	private List<Pais> paisesLimitrofes;
+	private List<Object> limitrofes;
 
 	public Provincia(String nombre, Ciudad ciudad) {
 		this.nombre = nombre;

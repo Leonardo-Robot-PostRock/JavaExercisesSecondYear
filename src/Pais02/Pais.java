@@ -11,9 +11,9 @@ import java.util.List;
 public class Pais {
 
 	private String nombre;
-	public List<Provincia> m_Provincia;
-	public Continente continente;
-	public Capital m_Capital;
+	private List<Provincia> m_Provincia;
+	private Continente continente;
+	private Capital m_Capital;
 	private List<Pais> paisesLimitrofes;
 
 	public Pais(String nombre) {
@@ -27,9 +27,17 @@ public class Pais {
 		this.m_Provincia.add(nombreProvincia);
 
 	}
-
+	
 	public String getNombre() {
 		return nombre;
+	}
+
+	public Capital getM_Capital() {
+		return m_Capital;
+	}
+
+	public void setM_Capital(Capital m_Capital) {
+		this.m_Capital = m_Capital;
 	}
 
 	public void setNombre(String nombre) {
