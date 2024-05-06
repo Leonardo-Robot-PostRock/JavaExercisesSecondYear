@@ -7,11 +7,10 @@ import java.util.List;
  * @version 1.0
  * @created 06-May-2024 1:04:52 AM
  */
-public class Pastura {
+public class Pastura implements Cultivo {
 
 	private String nombre;
 	protected List<Mineral> requerimientoDeMinerales;
-
 
 	public Pastura() {
 
@@ -29,17 +28,18 @@ public class Pastura {
 	 * 
 	 * @param lote
 	 */
+	@Override
 	public boolean puedeSembrar(Lote lote) {
 		if (lote.estaSembradoConPastura()) {
 			return false;
 		}
-		
-		for(Mineral mineral : requerimientoDeMinerales) {
-			if(!lote.getMineral().contains(mineral)) {
+
+		for (Mineral mineral : requerimientoDeMinerales) {
+			if (!lote.getMineral().contains(mineral)) {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
 

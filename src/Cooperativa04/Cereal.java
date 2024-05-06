@@ -7,7 +7,7 @@ import java.util.List;
  * @version 1.0
  * @created 06-May-2024 1:04:47 AM
  */
-public abstract class Cereal {
+public abstract class Cereal implements Cultivo {
 
 	protected String nombre;
 	protected List<Mineral> requerimientoDeMinerales;
@@ -21,13 +21,14 @@ public abstract class Cereal {
 		this.requerimientoDeMinerales = requerimientoDeMinerales;
 	}
 
+	@Override
 	public boolean puedeSembrar(Lote lote) {
-		for(Mineral mineral : requerimientoDeMinerales) {
-			if(!lote.getMineral().contains(mineral)) {
+		for (Mineral mineral : requerimientoDeMinerales) {
+			if (!lote.getMineral().contains(mineral)) {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
 
@@ -50,7 +51,5 @@ public abstract class Cereal {
 	public void setRequerimientoDeMinerales(List<Mineral> requerimientoDeMinerales) {
 		this.requerimientoDeMinerales = requerimientoDeMinerales;
 	}
-	
-	
 
 }
