@@ -21,7 +21,7 @@ public class Mineral {
 	 */
 	public Mineral(String nombre, String tipoDeMineral) {
 		this.nombre = nombre;
-		this.tipoDeMineral = tipoDeMineral;
+		this.tipoDeMineral = tipoDeMineral.toLowerCase();
 	}
 
 	public String getNombre() {
@@ -45,7 +45,7 @@ public class Mineral {
 	 * @param newVal
 	 */
 	public void setTipoDeMineral(String newVal) {
-		tipoDeMineral = newVal;
+		tipoDeMineral = newVal.toLowerCase();
 	}
 
 }
