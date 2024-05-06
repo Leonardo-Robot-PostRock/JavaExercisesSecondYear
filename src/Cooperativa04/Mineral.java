@@ -46,7 +46,7 @@ public class Mineral {
 	 * @param newVal
 	 */
 	public void setTipoDeMineral(String newVal) {
-		verificarTipoDeMineral(newVal);
+		verificarTipoDeMineral(newVal.toLowerCase());
 		tipoDeMineral = newVal.toLowerCase();
 	}
 	
