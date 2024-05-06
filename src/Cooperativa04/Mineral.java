@@ -21,6 +21,9 @@ public class Mineral {
 	 */
 	public Mineral(String nombre, String tipoDeMineral) {
 		this.nombre = nombre;
+		if (!tipoDeMineral.toLowerCase().equals("primario") || !tipoDeMineral.toLowerCase().equals("secundario")) {
+			throw new IllegalArgumentException("Los minerales sólo pueden ser de tipo primario o secundario");
+		}
 		this.tipoDeMineral = tipoDeMineral.toLowerCase();
 	}
 
@@ -45,6 +48,9 @@ public class Mineral {
 	 * @param newVal
 	 */
 	public void setTipoDeMineral(String newVal) {
+		if (!newVal.toLowerCase().equals("primario") || !newVal.toLowerCase().equals("secundario")) {
+			throw new IllegalArgumentException("Los minerales sólo pueden ser de tipo primario o secundario");
+		}
 		tipoDeMineral = newVal.toLowerCase();
 	}
 
