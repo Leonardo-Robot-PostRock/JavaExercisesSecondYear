@@ -20,8 +20,9 @@ public class Pastura implements Cultivo {
 	 * 
 	 * @param nombre
 	 */
-	public Pastura(String nombre) {
+	public Pastura(String nombre, List<Mineral> requerimientoDeMinerales) {
 		this.nombre = nombre;
+		this.requerimientoDeMinerales = requerimientoDeMinerales;
 	}
 
 	/**
