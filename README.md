@@ -1,6 +1,7 @@
-- Estos son ejercicios de práctica profesionalizante 2.
+Estos son ejercicios de práctica profesionalizante 2.
+==============
 
-** Enunciados **
+> Enunciados
   
 Ejercicio 1:
 --------------
