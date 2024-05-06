@@ -83,5 +83,14 @@ public class Lote {
 	public void setMineral(List<Mineral> mineral) {
 		this.m_Mineral = mineral;
 	}
+	
+	public List<Mineral> getMineralPrimario() {
+		return mineralPrimario;
+	}
+
+	public List<Mineral> getMineralSecundario() {
+		return mineralSecundario;
+	}
+
 
 }
